@@ -1,0 +1,141 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.navbar {
+    background-color: #2c3e50 !important;
+}
+
+section {
+    padding: 80px 20px;
+    min-height: 100vh;
+}
+
+/* Styles pour la section Accueil */
+#accueil {
+    background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('fond.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.photo-container {
+    position: relative;
+    width: 280px;
+    height: 290px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-photo {
+    width: 100%;
+    height: 130%;
+    object-fit: cover;
+}
+
+/* Étoiles en orbite */
+.star {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #3498db;
+    border-radius: 50%;
+    animation: orbit 4s linear infinite;
+}
+
+.star-1 {
+    top: -20px;
+    left: 50%;
+    animation-delay: 0s;
+}
+
+.star-2 {
+    top: 50%;
+    left: -20px;
+    animation-delay: 1s;
+}
+
+.star-3 {
+    top: 100%;
+    left: 50%;
+    animation-delay: 2s;
+}
+
+.star-4 {
+    top: 50%;
+    left: 100%;
+    animation-delay: 3s;
+}
+
+@keyframes orbit {
+    0% {
+        transform: rotate(0deg) translateX(100px) rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg) translateX(100px) rotate(360deg);
+    }
+}
+
+/* Styles pour le texte à droite */
+#accueil h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#accueil .lead {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+#accueil .btn-primary {
+    background-color: #2c3e50;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+#accueil .btn-primary:hover {
+    background-color: #3498db;
+}
+
+/* Styles pour les compétences */
+.competence-card {
+    padding: 20px;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.competence-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.competence-description {
+    display: none;
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.competence-card:hover .competence-description {
+    display: block;
+}
+
+.skill-bar {
+    background-color: #e9ecef;
+    border-radius: 20px;
+    margin: 15px 0;
+}
+
+.skill-progress {
+    background-color: #3498db;
+    height: 25px;
+    border-radius: 20px;
+    text-align: right;
+    padding-right: 10px;
+    color: white;
+}
